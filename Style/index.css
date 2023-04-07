@@ -1,0 +1,589 @@
+.container-wrap {
+  width: 1333px;
+  margin: 0 auto;
+}    
+
+body {
+  min-width: 1333px;
+} 
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    left: 0px;
+    top: 0px;
+    background: #1E212C;
+}
+
+.login p {
+position: absolute;
+left: 15%;
+font-size: 14px;
+color: #FFFFFF;
+opacity: 0.6;
+}
+
+.login a {
+    position: relative;
+    left: calc(50% - 364px/2 - 34px);
+    top: calc(50% - 21px/2 - 0.5px);
+    color: #FFFFFF;
+    opacity: 0.6;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: rgb(248, 252, 12);
+}
+
+.account {
+position: absolute;
+height: 21px;
+left: 70%;
+top: 11px;
+display: flex;
+background: rgba(0, 0, 0, 0);    /* прозрачный фон */
+border: none;
+cursor: pointer;
+}
+
+.menu {
+    width: 100%;
+    word-spacing: 30px;
+}
+
+.menu img {
+    position: absolute;
+    left: 15%;
+    top: 60px;
+}
+
+.menu a {
+position: relative;
+left: 30%;
+top: 55px;
+text-decoration: none;
+font-size: 16px;
+color: #424551;
+}
+
+.menu a:hover {
+    color: rgb(28, 12, 252);
+}
+
+.search {
+  position: relative;
+  width: 300px;
+  left: 59%;
+  top: 24px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+}
+
+.search-input {
+  width: 94%;
+  height: 39px;
+  padding-left: 15px;
+}
+
+.search-button {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);   /* прозрачный фон */
+  border: none;
+}
+
+.search-button:before {
+  content: url('Vector\ \(Stroke\).png');  /* иконка для кнопки */
+}
+
+.sale {
+position: absolute;
+width: 100%;
+height: 34px;
+top: 102px;
+left: 0px;
+background: #17696A;
+}
+
+.sale p {
+    color: #FFFFFF;
+   font-size: 12px;
+   text-align: center;
+   word-spacing: 3px;
+}
+
+              /*////////////////////////////////////////            Слайдер               /////////////////////////////////////////*/
+
+.wrapper {
+  position: relative;       /* под вопросом */  
+}  
+
+.wrapper input {
+  display:none     /* отключить кружки для слайдера по умолчанию */
+} 
+
+.inner {
+  transition: all .8s cubic-bezier(.77,0,.175,1); 
+  width:500%;                                     /* увеличить до 500% чтобы потом скрыть лишние 400% */
+}
+
+.inner article {
+  width: 20%;
+  float:left;           /* Float -  для позиционирования элементов. (left, top, right,) */
+  position:relative; 
+  top: 63px;
+} 
+
+.inner  img {
+  width: 100%;
+  height: 650px;
+} 
+
+.slider-next {
+  height:50px;
+  position:absolute;
+  top:50%;
+  width:100%;
+} 
+
+.slider-next label {  /* стрелки */ 
+  width: 48px; 
+  height:48px; 
+} 
+
+.h1 p {
+  position: absolute;
+  font-size: 18px;
+letter-spacing: 1px;
+text-transform: uppercase; /* большие буквы */
+top: -235px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100&display=swap');
+
+.h1 h1 {
+  position: absolute;
+  font-size: 66px;
+  top: -240px;
+  font-family: 'Lato', sans-serif;
+}
+
+.h1 button {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  letter-spacing: 0.5px;
+  padding: 0px 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #17696A;
+}
+
+.slider-dot {
+  position:absolute;
+  left: 12%;
+  top: 400px;                       /* позиция точек */
+  bottom:0;
+}
+
+.slider-dot img {
+  width: 130px;
+  height: 50px;
+}
+
+.slider-dot label:hover {
+   cursor: pointer;           /* эффект при наведений на 1 2 3 4 */              
+} 
+
+.slider-wrapper { 
+  overflow:hidden; 
+/* box-shadow:1px 1px 4px #666;        /* тень и цвет для блока */
+} 
+
+#slide1:checked~.slider-next 
+label:nth-child(2), #slide2:checked~.slider-next  
+label:nth-child(3), #slide3:checked~.slider-next
+label:nth-child(4), #slide4:checked~.slider-next
+label:nth-child(5), #slide5:checked~.slider-next 
+ label:nth-child(1)  {  
+  background-image: url('hover.png'); 
+  display:block;
+  float:right;
+  cursor: pointer;
+  margin-right:5px  /* правая стрелка */
+}  
+
+#slide1:checked~.slider-next 
+label:nth-child(5), #slide2:checked~.slider-next  
+label:nth-child(1), #slide3:checked~.slider-next
+label:nth-child(2), #slide4:checked~.slider-next
+label:nth-child(3), #slide5:checked~.slider-next
+label:nth-child(4) { 
+  background-image: url('prev-btn.png'); 
+  display:block;
+  float:left;
+  margin-left:5px;   /* левая кнопка */
+  cursor: pointer;
+}  
+ 
+#slide1:checked~.slider-wrapper .inner{margin-left:0} 
+#slide2:checked~.slider-wrapper .inner{margin-left:-100%}
+#slide3:checked~.slider-wrapper .inner{margin-left:-200%}
+#slide4:checked~.slider-wrapper .inner{margin-left:-300%}
+#slide5:checked~.slider-wrapper .inner{margin-left:-400%} 
+
+.men-women-kids {
+position: absolute;
+width: 1000px;
+height: 350px;
+top: 685px;
+left: 15%;
+}
+
+.h2 h2 {
+  position: absolute;
+  left: 42%;
+  top: 1070px;
+  font-size: 46px;
+}
+
+.h2 p {
+position: absolute;
+left: 38%;
+top: 1160px;
+text-align: center;
+font-size: 18px;
+line-height: 150%;
+color: #787A80;
+}
+
+.h2 a {
+  color: #17696A;
+}
+
+.h2 a:hover {
+  color: blueviolet;
+}
+
+#block-size {
+  float:left;
+  padding-top: 540px;
+  margin-left: 20px; 
+}
+
+#block-size img { 
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+}
+
+#block-size img {
+  transition: 1s; /* Время эффекта */
+ }
+ #block-size img:hover {
+  transform: scale(1.5); /* Увеличиваем масштаб */
+ }
+
+#block-size a {
+  color: #494f6e;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  text-decoration: none;
+}
+
+#block-size a:hover {
+  color: blueviolet;
+}
+
+#block-size p {
+  font-size: 18px;
+}
+
+ 
+.woman-men {
+  display: flex;
+  position: absolute;  
+  width: 100%;    
+}  
+
+.woman-men p {
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+text-transform: uppercase; 
+}
+
+.woman {
+position: absolute;
+left: 2%;
+top: 875px;
+} 
+
+.woman img {
+  width: 565px;
+  height: 370px;
+}
+
+.Summer-Collections img {
+ width: 191px;
+ height: 44px;
+}
+
+.Summer-Collections {
+  position: absolute;
+  left: 10%;
+  top: 60px;
+}
+
+.men {
+position: absolute;
+right: 2%;
+top: 875px;
+} 
+
+.men img {
+width: 720px;
+height: 370px;
+} 
+
+.Sweaters img {
+  width: 129px;
+height: 44px;
+}
+
+.Sweaters {
+  position: absolute;
+  right: 60%;
+  top: 60px;
+}
+
+.Shoes img {
+  width: 720px;
+  height: 370px;
+}
+
+.Shoes {
+  position: absolute;
+  left: 2%;
+top: 1253px;
+}
+
+
+.New-collection img {
+position: absolute;
+  width: 155px;
+height: 44px;
+}
+
+
+.New-collection {
+  position: absolute;
+  left: 10%;
+  top: 40px;
+}
+
+.background {
+position: absolute;
+right: 2%;
+top: 1253px;
+}
+
+.background img {
+  width: 565px;
+  height: 370px;
+}
+
+.img-background img {
+  position: absolute;
+width: 210px;
+height: 190px;
+right: -20px;
+top: -85px;
+}
+
+
+.email input {
+  height: 44px;
+  width: 300px;
+  padding-left: 15px;
+  height: 40px;
+  width: 220px;
+  border: 1px solid #D7DADD;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.email button {
+  margin-left: -4px;
+  color: #FFFFFF;;
+  cursor: pointer;
+  background: #17696A;   
+  border: none;
+  width: 100px;
+  height: 44px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.bg-text {
+  position: absolute;
+  padding-left: 25px;
+  top: 100px;
+}
+
+.Popular-categories h3 {
+  position: absolute;
+  top: 2370px;
+  left: 45%;
+}
+
+.category img {
+  position: relative;
+  top: 900px;
+  margin-left: 2%;
+  left: 2%;
+} 
+
+.category img {
+  transition: 1s; /* Время эффекта */
+ }
+ .category img:hover {
+  transform: scale(1.5); /* Увеличиваем масштаб */
+ }
+
+.background2 {
+  position: relative;
+  width: 100%;
+  top: 950px;
+  height: 220px;
+}
+
+.image4 img {
+  position: relative;
+  width: 420px;
+  height: 260px;
+  top: 687px;
+  left: 12%;
+}
+
+.google-play img {
+  width: 162px;
+height: 48px;
+}
+
+.google-play  {
+  position: absolute;
+  right: 10%;
+  top: 2738px;
+}
+
+.google-play h4 {
+  color: #FFFFFF;
+font-size: 27px;
+}
+
+.icon-boxes {
+  position: relative;
+  top: 750px;
+  text-align: center;
+}
+
+.bg-color {    
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #F4F5F6;
+  top: 740px;
+}
+
+.email-input {
+  height: 44px;
+  width: 300px;
+  padding-left: 15px;
+  height: 40px;
+  width: 220px;
+  border: 1px solid #D7DADD;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.email-button {
+  margin-left: -4px;
+  color: #FFFFFF;;
+  cursor: pointer;
+  background: #17696A;   
+  border: none;
+  width: 100px;
+  height: 44px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+} 
+
+.bg-color h2 {
+font-size: 35px;
+}
+ 
+.bg-color {
+  color: #424551;
+} 
+
+.bg-color img {
+  width: 361px;
+height: 316px;
+}
+
+.input-img {
+  left: 15%;
+  top: 20px;
+  position: absolute;
+}
+
+.email-img {
+  position: absolute;
+  top: 20px;
+  right: 15%;
+}
+
+.bg-c {
+  background: #1E212C;
+  width: 100%;
+  height: 205px;
+  position: relative;
+  top: 740px;
+}
+
+.bg-c a:hover {
+  color: gold;
+}
+
+.bg-c p {
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.bg-c a {
+  opacity: 0.6;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bg-c {
+  display: flex;
+  justify-content: center;
+}
+
+.app-store a {
+  opacity: 1;
+}
+
